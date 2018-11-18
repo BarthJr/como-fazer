@@ -13,10 +13,8 @@ app.use(bodyParser.urlencoded())
 app.use('/categorias', categorias)
 app.use('/publicacoes', publicacoes)
 
-app.get('/', async(req, res) => {
-  const content = await axios.get('https://como-fazer-barth.firebaseio.com/teste.json')
-  console.log(content.data)
-  res.render('index.ejs', {i: content.data})
+app.get('/', (req, res) => {
+  res.render('index.ejs')
 })
 
 
