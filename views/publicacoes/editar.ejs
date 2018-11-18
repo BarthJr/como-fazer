@@ -1,0 +1,13 @@
+<%include ../partials/header.ejs%>
+<form method="POST" action="/publicacoes/editar/<%=categoria%>/<%=publicacao.id%>">
+    <div class="form-group">
+        <label for="titulo">Titulo</label>
+        <input type="text" class="form-control" id="titulo" placeholder="Insira o titulo" name="titulo" value="<%= publicacao.titulo%>">
+    </div>
+    <div class="form-group">
+        <label for="conteudo">Conteudo</label>
+        <textarea type="text" class="form-control" id="conteudo" placeholder="Insira o conteudo" name="conteudo"><%= publicacao.conteudo%> </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+<%include ../partials/footer.ejs%>
